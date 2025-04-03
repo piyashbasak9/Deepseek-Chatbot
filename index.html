@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WSP ChatBot</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/emoji-picker-element@1.12.0/dist/index.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emoji-picker-element@1.12.0/dist/index.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>✨ ChatBot ✨</h2>
+        
+        <div class="input-container">
+            <button class="emoji-btn" id="emojiBtn">@</button> 
+            <button class="file-upload-btn" id="fileUploadBtn" title="Upload file">
+                📎
+                <input type="file" id="fileInput" accept=".txt,.pdf,.doc,.docx,.xls,.xlsx,.csv,.json,.jpg,.jpeg,.png,.gif" />
+            </button>
+            <div class="form-group">
+                <input
+                    type="text"
+                    class="form-control"
+                    id="userInput"
+                    placeholder="Ask me anything..." />
+            </div>
+        </div>
+        
+        <div id="filePreview" style="display: none;"></div>
+        
+        <button class="btn pulse" onclick="sendMessage()">Send Message</button>
+        
+        <div id="chat-container">
+            <!-- Messages will appear here -->
+        </div>
+        
+        <div id="status-info" class="status-info"></div>
+        
+        <div class="emoji-picker-container">
+            <emoji-picker></emoji-picker>
+        </div>
+    </div>
+    
+    <div class="fab" id="scrollToBottomBtn" title="Scroll to bottom">
+        ↓
+    </div>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>
