@@ -334,7 +334,7 @@ async function sendMessage() {
         // Prepare form data if file is attached
         let requestBody;
         let headers = {
-            'Authorization': 'Bearer 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',
+            'Authorization': 'Bearer < give api here >',
             'HTTP-Referer': 'https://www.sitename.com',
             'X-Title': 'SiteName'
         };
